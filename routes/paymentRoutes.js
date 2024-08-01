@@ -4,7 +4,7 @@ const {
   sendStripeApiKey,
 } = require("../controllers/paymentControllers");
 const router = express.Router();
-const { isAuthenticatedError } = require("../middleware/auth");
+const { isAuthenticatedError } = require("../middleware/Auth");
 
 router.route("/payment/process").post(isAuthenticatedError, processPayment);
 
